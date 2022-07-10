@@ -1,0 +1,16 @@
+{% load bootstrap4 %}
+<a href="{% url 'products:product_list' %}"> Go Back</a>
+<h1>---------------------------------------------------------------------</h1>
+
+<h1>Edit Product:</h1>
+
+<form method="post" enctype= multipart/form-data >
+{% csrf_token %}
+<h3>
+{% bootstrap_form user_form %}
+{% bootstrap_form profile_form %}
+</h3>
+{% buttons %}
+<button type="submit" class="btn btn-primary">Save</button>
+{% endbuttons %}
+</form>
